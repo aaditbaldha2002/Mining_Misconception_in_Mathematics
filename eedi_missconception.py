@@ -43,6 +43,7 @@ def check_dependencies():
     """
     Check if all required dependencies are installed.
     If any dependency is missing, attempt to install it using pip.
+    To solve any dependency issues accross different systems and environments, for team members,
     """
     required_packages = {
         'numpy': '1.21.0',
@@ -5608,33 +5609,5 @@ print(f"Validation MAP@25: {map_score:.4f}")
 # Analyze errors
 analyze_errors(validation_predictions, valid_subset, preprocessed_misconceptions, n_examples=3)
 
-# %%
-# Summarize overall performance across different model configurations
-model_performances = {
-    'TF-IDF Baseline': 0.35,
-    'Simple Retrieval (MPNet)': 0.42,
-    'Retrieval + Reranking': 0.47,
-    'Ensemble': 0.51,
-    'Optimized Ensemble': 0.53
-}
-
-# Create a bar chart of model performances
-plt.figure(figsize=(12, 6))
-models = list(model_performances.keys())
-scores = list(model_performances.values())
-
-plt.bar(models, scores, color='skyblue')
-plt.title('Model Performance Comparison (MAP@25)')
-plt.xlabel('Model')
-plt.ylabel('MAP@25')
-plt.ylim(0, 0.6)
-plt.xticks(rotation=45, ha='right')
-plt.grid(axis='y', alpha=0.3)
-
-for i, score in enumerate(scores):
-    plt.text(i, score + 0.01, f'{score:.2f}', ha='center')
-
-plt.tight_layout()
-plt.show()
 
 
