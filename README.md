@@ -197,10 +197,10 @@ Future improvements could include:
 
 ## License
 
-This project is provided for educational purposes. Please respect the competition rules and data license terms.
+This project is provided for educational purposes. Please respect the data license terms.
 
 ## Acknowledgments
 
 - Eedi, Vanderbilt University, and the Learning Agency Lab for providing the dataset
-- Kaggle for hosting the competition
+- Stevens institute of technology - course CS584 NLP for providing the platform for the project
 - The transformers and sentence-transformers libraries for providing pre-trained models
